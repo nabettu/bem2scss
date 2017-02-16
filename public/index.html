@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <!-- meta-->
+    <title>pug2css</title>
+    <meta name="description" content="pugからcssを生成">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- smartphone meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+    <!-- ogp-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="pug2css">
+    <meta property="og:site_name" content="pug2css">
+    <meta property="og:description" content="pugからcssを生成">
+    <meta property="og:locale" content="ja_JP">
+    <!-- twitter card-->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="pug2css">
+    <meta property="twitter:description" content="pugからcssを生成">
+    <!-- stylesheet-->
+    <link rel="stylesheet" href="/css/style.css?v=1">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>pug2css</h1>
+      <p>pugからcssを生成します。</p>
+      <textarea id="input">section.hero
+    h1.hero__title サイトタイトル
+    p.hero__text サイト説明文
+    a.hero__link(href="#about") ABOUTへ
+
+section.about#about
+    h2.about__title ABOUT
+    p.about__text ABOUT文章
+    img.about__image</textarea>
+      <button id="convert">convert</button><span class="checks">
+        <label for="extract_ids">
+          <input id="extract_ids" type="checkbox" name="extract_ids" checked=""><span>IDs</span>
+        </label>
+        <label for="extract_classes">
+          <input id="extract_classes" type="checkbox" name="extract_classes" checked=""><span>Classes</span>
+        </label></span>
+      <textarea id="output"></textarea>
+    </div>
+    <!-- javascript-->
+    <script src="/js/extractcss.js"></script>
+    <script src="/js/script.js?v=1"></script>
+  </body>
+</html>

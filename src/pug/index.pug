@@ -1,0 +1,32 @@
+extends /layout/_DefaultLayout
+
+prepend ConfigBlock
+  - page_name = ''
+
+//- append StylesheetBlock
+
+//- append JavascriptBlock
+
+block ContentBlock
+    h1 pug2css
+    p pugからcssを生成します。
+    textarea#input.
+        section.hero
+            h1.hero__title サイトタイトル
+            p.hero__text サイト説明文
+            a.hero__link(href="#about") ABOUTへ
+
+        section.about#about
+            h2.about__title ABOUT
+            p.about__text ABOUT文章
+            img.about__image
+    button#convert convert
+    span.checks
+        label(for='extract_ids')
+          input#extract_ids(type='checkbox', name='extract_ids', checked='')
+          span IDs
+        label(for='extract_classes')
+          input#extract_classes(type='checkbox', name='extract_classes', checked='')
+          span Classes
+
+    textarea#output
